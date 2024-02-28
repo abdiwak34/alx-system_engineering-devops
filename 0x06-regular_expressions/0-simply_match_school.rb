@@ -1,3 +1,13 @@
 #!/usr/bin/env ruby
-# A regular expression that is simply matching School
-puts ARGV[0].scan(/School/).join
+
+if ARGV.empty?
+    exit
+  end
+  
+  input = ARGV[0]
+  
+  pattern = /School/
+  
+  matches = input.scan(pattern)
+  
+  puts matches.join
